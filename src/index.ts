@@ -39,7 +39,7 @@ export class Client {
     return base<DeviceStatus>(this.apiKey, `devices/${deviceId}`)
   };
 
-  setDeviceStatus = async ( deviceId: string, control:Control) => {
+  setDeviceStatus = async ( deviceId: string, control:Partial<Control>) => {
     const data = JSON.stringify({control})
     return base<{}>(this.apiKey, `devices/${deviceId}`, 'PATCH', data)
   };
