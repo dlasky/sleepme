@@ -4,7 +4,7 @@ export interface Device {
     attachments: string[];
 }
 
-export interface Status {
+export interface DeviceStatus {
   about: About;
   control: Control;
   status: Status;

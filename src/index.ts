@@ -1,4 +1,4 @@
-import { Control, Device, Status } from "./types";
+import { Control, Device, DeviceStatus, Status } from "./types";
 
 const baseUrl = "https://api.developer.sleep.me/v1";
 
@@ -36,7 +36,7 @@ export class Client {
   };
 
   getDeviceStatus = async ( deviceId: string) => {
-    return base<Status>(this.apiKey, `devices/${deviceId}`)
+    return base<DeviceStatus>(this.apiKey, `devices/${deviceId}`)
   };
 
   setDeviceStatus = async ( deviceId: string, control:Control) => {
